@@ -1,3 +1,4 @@
+
 @import url('https://googleapis.com');
 
 * {
@@ -167,7 +168,6 @@ button:active {
 
 .igual {
     grid-row: span 2; 
-        
 
     background: linear-gradient(
         135deg,
@@ -200,7 +200,6 @@ button:active {
    ========================= */
 
 @media (max-width: 420px) {
-
     .calculadora {
         width: calc(100% - 25px);
         padding: 17px;
