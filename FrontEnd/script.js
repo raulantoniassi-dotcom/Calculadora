@@ -13,10 +13,13 @@ function addNumber(number){
 }
 
 // Botões pra apagar
-const limpar = document.getElementById("limpar")
 limpar.addEventListener("click", () => {
-  display.value = ""
-})
+    display.value = "";
+    a = [];
+    b = [];
+    operador = false;
+    operacaoAtual = "";
+});
 
 const backspace = document.getElementById("Backspace")
 
