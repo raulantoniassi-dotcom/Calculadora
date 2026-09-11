@@ -1,27 +1,25 @@
-
-@import url('https://googleapis.com');
+@import url("https://googleapis.com");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 
-    background:
-        radial-gradient(circle at 20% 20%, #4338ca55, transparent 35%),
-        radial-gradient(circle at 80% 80%, #7c3aed44, transparent 35%),
-        #080812;
+  background:
+    radial-gradient(circle at 20% 20%, #4338ca55, transparent 35%),
+    radial-gradient(circle at 80% 80%, #7c3aed44, transparent 35%), #080812;
 
-    color: white;
+  color: white;
 }
 
 /* =========================
@@ -29,19 +27,19 @@ body {
    ========================= */
 
 .calculadora {
-    width: 350px;
-    padding: 22px;
+  width: 350px;
+  padding: 22px;
 
-    background: rgba(25, 25, 40, 0.75);
+  background: rgba(25, 25, 40, 0.75);
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
 
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.55),
-        inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
 
-    backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 /* =========================
@@ -49,29 +47,28 @@ body {
    ========================= */
 
 #display {
-    width: 100%;
-    height: 100px;
+  width: 100%;
+  height: 100px;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    padding: 20px;
+  padding: 20px;
 
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 
-    border-radius: 20px;
+  border-radius: 20px;
 
-    background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.35);
 
-    color: white;
+  color: white;
 
-    text-align: right;
+  text-align: right;
 
-    font-size: 2.5rem;
-    font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 600;
 
-    box-shadow:
-        inset 0 3px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* =========================
@@ -79,49 +76,47 @@ body {
    ========================= */
 
 .botoes {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
-    gap: 12px;
+  gap: 12px;
 }
 
 button {
-    height: 65px;
+  height: 65px;
 
-    border: none;
-    border-radius: 18px;
+  border: none;
+  border-radius: 18px;
 
-    background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08);
 
-    color: white;
+  color: white;
 
-    font-family: inherit;
-    font-size: 1.25rem;
-    font-weight: 600;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 600;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    box-shadow:
-        0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 
-    transition:
-        transform 0.12s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
+  transition:
+    transform 0.12s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 button:hover {
-    background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.15);
 
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 
-    box-shadow:
-        0 8px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
-    transform: scale(0.94);
+  transform: scale(0.94);
 }
 
 /* =========================
@@ -129,22 +124,13 @@ button:active {
    ========================= */
 
 .operador {
-    background: linear-gradient(
-        135deg,
-        #6366f1,
-        #8b5cf6
-    );
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
 
-    box-shadow:
-        0 8px 20px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
 }
 
 .operador:hover {
-    background: linear-gradient(
-        135deg,
-        #818cf8,
-        #a78bfa
-    );
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
 }
 
 /* =========================
@@ -152,14 +138,14 @@ button:active {
    ========================= */
 
 .limpar {
-    grid-column: span 2;
-    background: rgba(239, 68, 68, 0.18);
+  grid-column: span 2;
+  background: rgba(239, 68, 68, 0.18);
 
-    color: #f87171;
+  color: #f87171;
 }
 
 .limpar:hover {
-    background: rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.3);
 }
 
 /* =========================
@@ -167,24 +153,15 @@ button:active {
    ========================= */
 
 .igual {
-    grid-row: span 2; 
+  grid-row: span 2;
 
-    background: linear-gradient(
-        135deg,
-        #06b6d4,
-        #3b82f6
-    );
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
 
-    box-shadow:
-        0 8px 25px rgba(6, 182, 212, 0.3);
+  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
 }
 
 .igual:hover {
-    background: linear-gradient(
-        135deg,
-        #22d3ee,
-        #60a5fa
-    );
+  background: linear-gradient(135deg, #22d3ee, #60a5fa);
 }
 
 /* =========================
@@ -192,7 +169,7 @@ button:active {
    ========================= */
 
 .zero {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 /* =========================
@@ -200,21 +177,21 @@ button:active {
    ========================= */
 
 @media (max-width: 420px) {
-    .calculadora {
-        width: calc(100% - 25px);
-        padding: 17px;
-    }
+  .calculadora {
+    width: calc(100% - 25px);
+    padding: 17px;
+  }
 
-    button {
-        height: 60px;
-    }
+  button {
+    height: 60px;
+  }
 
-    .igual {
-        height: 100%;
-    }
+  .igual {
+    height: 100%;
+  }
 
-    #display {
-        height: 90px;
-        font-size: 2rem;
-    }
+  #display {
+    height: 90px;
+    font-size: 2rem;
+  }
 }
